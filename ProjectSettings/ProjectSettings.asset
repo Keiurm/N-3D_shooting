@@ -831,11 +831,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 63f6a9c9-7c7d-4d9d-b9aa-ec1a280b4393
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Space Shooter
-  organizationId: 
+  projectName: N-3D_shooting
+  organizationId: kei01133343
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
   hmiLoadingImage: {fileID: 0}
