@@ -25,12 +25,15 @@ public class MyPlayerHealth : MonoBehaviour
 
     bool damaged;
 
+    MyPlayerShooting myPlayerShooting;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         currentHealth = startingHealth;
+        myPlayerShooting = GetComponentInChildren<MyPlayerShooting>();
     }
     void Update()
     {
@@ -60,10 +63,12 @@ public class MyPlayerHealth : MonoBehaviour
     void Death()
     {
         isDead = true;
+        myPlayerShooting.DisableEffects();
         anim.SetTrigger("Die");
         playerAudio.clip = deathClip;
         playerAudio.Play();
         playerMovement.enabled = false;
+        myPlayerShooting.enabled = false;
     }
 
 }
