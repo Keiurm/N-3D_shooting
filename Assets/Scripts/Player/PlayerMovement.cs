@@ -97,15 +97,10 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Ray origin: " + camRay.origin + ", direction: " + camRay.direction);
         if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask))
         {
-            Debug.Log("Raycast hit at: " + floorHit.point);
             Vector3 playerToMouse = floorHit.point - transform.position;
             playerToMouse.y = 0f;
             Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
             playerRigidbody.MoveRotation(newRotation);
-        }
-        else
-        {
-            Debug.Log("Raycast did not hit.");
         }
     }
 
